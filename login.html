@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+        }
+        form{
+            display: grid;
+            width: 30%;
+            justify-content: center;
+            margin: auto;
+            border-radius: 20px;
+            padding: 20px;
+            height: 800px;
+            background-color: #fff;
+           
+        }
+        #mail,#pass{
+           margin-top: 20px;
+           width: 400px;
+           height: 50px;
+           font-size: 20px;
+           
+           font-weight: bold;
+        }
+        label{
+            font-size: 60px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 100px;
+            margin-bottom: 50px;
+            
+        }
+        #log{
+            width: 400px;
+            height: 50px; 
+            margin: auto;
+            
+            font-size: 25px;
+           
+            border: 0px;
+            color: #fff;
+            font-weight: bold;
+            margin-top: -10px;
+            background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+            border-radius: 8px;
+            border-style: none;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            flex-shrink: 0;
+            font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+            
+            font-weight: 500;
+            height: 4rem;
+            padding: 0 1.6rem;
+            text-align: center;
+            text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+            transition: all .5s;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation
+        }
+        #newacc{
+            margin-top: -55px;
+        }
+        #forgot,#newacc{
+            font-size: 25px;
+            
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <label for="">Login</label>
+        <input id="mail" type="text" placeholder="Email">
+        <input id="pass" type="text" placeholder="Password">
+        <input id="log" type="submit" value="Login">
+        <p id="forgot">Forgot <a href="">Password?</a></p>
+        <p id="newacc">Don't have an account? <a href="" style="color: #455EB5 9.16%;">Sign up</a></p>
+    </form>
+</body>
+</html>
