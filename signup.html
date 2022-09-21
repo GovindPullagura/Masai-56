@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <style>
+        body{
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        div{
+            width:300px;
+            height:auto;
+            margin:auto;
+            margin-top:100px;
+            padding:30px 40px;
+            background-color:#48c9b0;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;        
+        }
+        h1{
+            color:white;
+            padding :10px;
+            font-weight:lighter;
+            text-align:center;
+        }
+        form{
+            display:flex;
+            flex-direction:column;
+            gap:20px;
+        }
+        input{
+            padding:15px;
+            border:0px;
+            font-size:14px;
+            background-color:rgb(238, 239, 240);
+        }
+        input:last-of-type{
+            background-color: #17a589;
+            color:white;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding:20px;
+            font-weight:600;
+            font-size:16px;
+        }
+        button{
+            padding:20px;
+            width:100%;
+            border:0px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin:10px 0px 30px 0px;
+            color:white;
+            font-size:16px;
+            font-weight:600;
+            background-color: #17a589;
+        }
+        p{
+            color:red;
+            font-size:14px;
+            text-align:center;
+            padding:0;
+            margin-top:-13px;
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>
+            - Visitor -
+        </h1>
+        <form>
+            <input type="text" id="name" placeholder="Full Name"/>
+            <input type="email" id="email" placeholder="Email"/>
+            <input type="text" id="org" placeholder="Organization"/>
+            <input type="submit" value="SIGN UP">
+            <p>**Field empty**</p>
+        </form>
+        <button>RETURN</button>
+    </div>
+</body>
+</html>
+<script>
+    let form=document.querySelector("form");
+    let arr=[];
+    form.addEventListener("submit",submitfun)
+    function submitfun(event)
+    {
+        event.preventDefault();
+        document.querySelector("form p").style.display="none";
+        let obj={
+            name:document.querySelector("#name").value,
+            email:document.querySelector("#email").value,
+            org:document.querySelector("#org").value
+        }
+        if(obj.name==""||obj.email==""||obj.org=="")
+        {
+            document.querySelector("form p").style.display="inline";
+            return;
+        }
+        arr.push(obj);
+        localStorage.setItem("details",JSON.stringify(arr));
+        document.querySelector("#name").value="";
+        document.querySelector("#email").value="";
+        document.querySelector("#org").value="";
+    }
+</script>
