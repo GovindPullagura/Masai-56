@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        .product {
+            display: flex;
+            column-gap: 20px;
+            width: 90%;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        .product>div {
+            width: 40%;
+            margin: auto;
+            margin-top: 10px;
+            /* height: 680px; */
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+            border-radius: 5px;
+            padding-bottom: 10px;
+
+        }
+
+        .product>div:hover {
+            transform: scale(1.02);
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        }
+
+        img {
+            display: block;
+            width: 60%;
+            margin: auto;
+            margin-top: 50px;
+            height: 400px;
+
+        }
+
+        .product>div>p:nth-child(3) {
+            color: grey;
+            font-weight: lighter;
+        }
+
+
+        .product div>p>span:nth-child(1) {
+            text-decoration: line-through;
+            color: grey;
+        }
+
+        .product div>p>span:nth-child(2) {
+            color: #0DAC63;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="product">
+        <div>
+            <img src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/78aa1da6-b197-4776-b801-b163a7e7d7f3/sportswear-club-fleece-pullover-hoodie-MSXJMm.png"
+                alt="">
+            <h3>nike</h3>
+            <p>Men Cotton Long Sleeves Sweatshirt</p>
+            <p>₹ 359 <span>₹ 1,499</span> <span>-76%</span></p>
+        </div>
+
+        <div>
+            <img src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPJUBINATION-SJERS295568BD3913AD/1562955990957_0..jpg?imwidth=282&impolicy=hq"
+                alt="">
+            <h3>JUBINATION</h3>
+            <p>Men Wool Sleevless Sweater Pack of 1</p>
+            <p>₹ 799 <span>₹ 1,499</span> <span>-47%</span></p>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
